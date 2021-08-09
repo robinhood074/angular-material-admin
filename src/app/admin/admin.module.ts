@@ -7,6 +7,11 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {  NbTabsetModule,
+  NbRouteTabsetModule,
+  NbCardModule} from '@nebular/theme'
+
+
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { LayoutComponent } from './layout/layout.component';
@@ -23,7 +28,12 @@ import { SideNavComponent } from './layout/side-nav/side-nav.component';
     MatIconModule,
     MatInputModule,
     MatMenuModule,
-    MatListModule
+    MatListModule,
+    NbTabsetModule,
+    NbRouteTabsetModule,
+    NbCardModule,
+
+
   ],
   declarations: [LayoutComponent, TopNavComponent, SideNavComponent]
 })
