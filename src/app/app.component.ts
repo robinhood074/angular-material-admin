@@ -15,7 +15,6 @@ export class AppComponent {
   toggleSidebar() {
     this.sideNavToggled.emit();
   }
-
   onLoggedout() {
     localStorage.removeItem('isLoggedin');
     this.router.navigate(['/login']);

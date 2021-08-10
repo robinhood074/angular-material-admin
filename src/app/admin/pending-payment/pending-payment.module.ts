@@ -5,7 +5,6 @@ import { PendingPaymentRoutingModule } from './pending-payment-routing.module';
 import { PaymentComponent } from './payment/payment.component';
 import { PaymentDetailsComponent } from './payment-details/payment-details.component';
 import { PendingPaymentComponent } from './pending-payment.component';
-import { NbButtonModule, NbCardModule, NbRouteTabsetModule, NbTabsetModule } from '@nebular/theme';
 
 
 @NgModule({
@@ -17,10 +16,7 @@ import { NbButtonModule, NbCardModule, NbRouteTabsetModule, NbTabsetModule } fro
   imports: [
     CommonModule,
     PendingPaymentRoutingModule,
-    NbTabsetModule,
-    NbRouteTabsetModule,
-    NbCardModule,
-    NbButtonModule
+    
   ]
 })
 export class PendingPaymentModule { }

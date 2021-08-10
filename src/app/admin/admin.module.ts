@@ -7,9 +7,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {  NbTabsetModule,
-  NbRouteTabsetModule,
-  NbCardModule} from '@nebular/theme'
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 
@@ -17,6 +15,8 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { LayoutComponent } from './layout/layout.component';
 import { TopNavComponent } from './layout/top-nav/top-nav.component';
 import { SideNavComponent } from './layout/side-nav/side-nav.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -29,12 +29,13 @@ import { SideNavComponent } from './layout/side-nav/side-nav.component';
     MatInputModule,
     MatMenuModule,
     MatListModule,
-    NbTabsetModule,
-    NbRouteTabsetModule,
-    NbCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
 
 
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   declarations: [LayoutComponent, TopNavComponent, SideNavComponent]
 })
 export class AdminModule {}

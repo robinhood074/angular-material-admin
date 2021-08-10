@@ -5,7 +5,12 @@ import { TransactionHistoryRoutingModule } from './transaction-history-routing.m
 import { TransactionHistoryComponent } from './transaction-history.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
-import { NbButtonModule, NbCardModule, NbRouteTabsetModule, NbTabsetModule } from '@nebular/theme';
+
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 
 @NgModule({
@@ -17,10 +22,12 @@ import { NbButtonModule, NbCardModule, NbRouteTabsetModule, NbTabsetModule } fro
   imports: [
     CommonModule,
     TransactionHistoryRoutingModule,
-    NbTabsetModule,
-    NbRouteTabsetModule,
-    NbCardModule,
-    NbButtonModule
-  ]
+    MatTableModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatInputModule
+  ],
+  
 })
 export class TransactionHistoryModule { }

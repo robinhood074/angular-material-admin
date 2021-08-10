@@ -7,11 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
-import {  NbTabsetModule,
-  NbRouteTabsetModule,
-  NbCardModule} from '@nebular/theme'
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -19,6 +14,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,12 +27,6 @@ import { MatListModule } from '@angular/material/list';
     HttpClientModule,
     CoreModule,
     SharedModule,
-    NbThemeModule.forRoot({ name: 'default' }),
-    NbLayoutModule,
-    NbEvaIconsModule,
-    NbTabsetModule,
-    NbRouteTabsetModule,
-    NbCardModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
@@ -42,8 +34,12 @@ import { MatListModule } from '@angular/material/list';
     MatInputModule,
     MatMenuModule,
     MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
 
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
