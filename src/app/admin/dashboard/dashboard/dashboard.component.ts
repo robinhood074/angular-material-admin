@@ -16,5 +16,5 @@ export class DashboardComponent implements OnInit {
   @Input() count: number;
   @Input() label: string;
   @Input() data: number;
-
+  
 }
